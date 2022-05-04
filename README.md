@@ -4,6 +4,14 @@
 
   - 타입을 강제로 부여하여 예상치 못한 실행 결과나 에러를 막아주기 위해 사용한다. (강타입 언어 / strongly typed)
 
+- npm i -g typescript : 타입스크립트 전역 설치
+
+- tsc --version : 버전 확인
+
+- tsc --init : tsconfig.json 생성
+
+- tsc : ts 파일을 js로 컴파일
+
 ```javascript
 function divide(a, b) {
   return a / b;
@@ -18,7 +26,7 @@ divide("xxxxxx"); // NaN
 [1] + true; // "1true"
 ```
 
-- 가장 피해야 할 에러는 런타임 에러인데, 프로그램 실행 중 발생한 오류이다. (런타임 에러는 실제 유저가 마주하게 될 것이므로 심각하다.)
+- 가장 피해야 할 에러는 런타임 에러인데, 프로그램 실행 중 발생한 오류이다. **(런타임 에러는 실제 유저가 마주하게 될 것이므로 심각하다.)**
 
 ```javascript
 const nico = {
@@ -38,3 +46,15 @@ nico.hello(); // error!
 - 브라우저는 ts를 이해하지 못하고 js만 이해한다. (Node.js는 양쪽 다 가능하다)
 
 - ts는 js로 변환된 뒤에 실행되는데, ts 코드에 에러가 있다면 js 코드로 컴파일되지 않는다.
+
+- **정적 타이핑 vs 타입 추론**
+
+  - 별도의 선언이 없어도 추론이 잘 되는 경우에는 타입 선언을 하지 않고, 그렇지 않은 경우에만 선언하는 것이 편리하고 자연스럽다.
+
+- call signatures : 함수를 어떻게 호출해야 하는지 알려준다. 함수 위에 마우스를 올리면 나온다.
+
+- 다형성 (polymorphism)
+
+- 오버로딩 (overloading) : 함수가 서로 다른 여러 개의 call signatures를 가지고 있을 때 발생한다.
+
+- 제네릭 (generics)
