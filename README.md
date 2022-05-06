@@ -53,8 +53,8 @@ nico.hello(); // error!
 
 - call signatures : 함수를 어떻게 호출해야 하는지 알려준다. 함수 위에 마우스를 올리면 나온다.
 
-- 다형성 (polymorphism)
-
 - 오버로딩 (overloading) : 함수가 서로 다른 여러 개의 call signatures를 가지고 있을 때 발생한다.
 
-- 제네릭 (generics)
+- 다형성 (polymorphism) : 여러 타입을 받아들임으로써 여러 형태를 가지는 것을 의미한다.
+
+- 제네릭 (generics) : 콜 시그니쳐의 콘크리트 타입을 알 수 없을 때 사용한다.
