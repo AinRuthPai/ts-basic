@@ -55,3 +55,25 @@ const z = superPrint([1, 2, 3, 4]);
 const l = superPrint([true, false, true]);
 const o = superPrint(["a", "b", "c"]);
 const w = superPrint([1, 2, true, "d"]);
+
+// 예시
+type Player2<E> = {
+  name: string;
+  extraInfo: E;
+};
+
+type NicoExtra = {
+  favFood: string;
+};
+type NicoPlayer = Player2<NicoExtra>;
+
+const nico2: NicoPlayer = {
+  name: "nico",
+  extraInfo: {
+    favFood: "kimchi",
+  },
+};
+const lynn2: Player2<null> = {
+  name: "lynn",
+  extraInfo: null,
+};
